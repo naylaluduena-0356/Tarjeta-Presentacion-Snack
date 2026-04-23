@@ -1,17 +1,20 @@
-import { StyleSheet, Text, Image, View, Button, Linking } from 'react-native';
+import { StyleSheet, Text, Image, View, Button, Linking, ScrollView } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 export default function Presentacion () {
   const instagram = () => {
   Linking.openURL("https://www.instagram.com/nayludu_?igsh=MWVra3J1Nmk3cmFtcw==")
 }
   return (
+<SafeAreaView>
+  <ScrollView>
     <View style={styles.container}>
       <View>
-        <Text style={styles.titulo}> Carta de presentacion </Text>
-        <Text style={styles.nombre}> Nombre completo: Nayla Elisa Luduena </Text>
-        <Text style={styles.edad}> Edad: 17 </Text>
+        <Text style={styles.titulo}> Carta de presentacion: </Text>
+        <Text style={styles.nombre}> Nombre completo: Nayla Elisa Ludueña. </Text>
+        <Text style={styles.edad}> Edad: 17 años.</Text>
         <Text style={styles.fecha}> Fecha de nacimiento: 26/02/09 </Text>
-        <Text style={styles.gustos}> Gustos: gatos, series, peliculas, historia, geografia </Text>
+        <Text style={styles.gustos}> Gustos: gatos, series, peliculas, historia, geografia. </Text>
       </View>
 
       <Image 
@@ -24,6 +27,8 @@ export default function Presentacion () {
         title="Apretar"
       />
     </View>
+  </ScrollView>
+</SafeAreaView>
   );
 }
 
